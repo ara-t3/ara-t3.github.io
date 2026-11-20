@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JediKG is now part of KLEIS</title>
+  <meta name="robots" content="noindex">
+  <script>
+    // ARA-T3 is now KLEIS: send old JediKG links to the new home,
+    // keeping the path, query string and anchor.
+    // e.g. ara-t3.github.io/jedikg/api/x.html#sec -> kleis-uniba.github.io/jedikg/api/x.html#sec
+    var p = location.pathname;
+    if (p.toLowerCase().indexOf("/jedikg") === 0) {
+      location.replace("https://kleis-uniba.github.io" + p + location.search + location.hash);
+    }
+  </script>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      max-width: 40rem;
+      margin: 15vh auto;
+      padding: 0 1.5rem;
+      line-height: 1.6;
+      color: #1f2328;
+    }
+    h1 { font-size: 1.6rem; margin-bottom: 0.5rem; }
+    a { color: #0969da; }
+    small { color: #59636e; }
+  </style>
+</head>
+<body>
+  <h1>JediKG has moved to KLEIS</h1>
+  <p>
+    The ARA-T3 lab is now <strong>KLEIS</strong>
+    (Knowledge, Learning, Explainability, Inference and Semantics),
+    and JediKG is now maintained under the
+    <a href="https://github.com/KLEIS-UNIBA">KLEIS-UNIBA</a> organization.
+  </p>
+  <p>
+    Documentation: <a href="https://kleis-uniba.github.io/jedikg/">kleis-uniba.github.io/jedikg</a><br>
+    Repository: <a href="https://github.com/KLEIS-UNIBA/jedikg">github.com/KLEIS-UNIBA/jedikg</a>
+  </p>
+  <p><small>If you are not redirected automatically, please use the links above and update your bookmarks.</small></p>
+</body>
+</html>
