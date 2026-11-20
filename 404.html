@@ -3,14 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>JediKG is now part of KLEIS</title>
+  <title>Moved to KLEIS</title>
   <meta name="robots" content="noindex">
   <script>
-    // ARA-T3 is now KLEIS: send old JediKG links to the new home,
+    // ARA-T3 is now KLEIS: send old documentation links to the new home,
     // keeping the path, query string and anchor.
     // e.g. ara-t3.github.io/jedikg/api/x.html#sec -> kleis-uniba.github.io/jedikg/api/x.html#sec
+    // To add a migrated repository, add its name to this list.
+    var moved = ["jedikg", "pykeen-nsx"];
+
     var p = location.pathname;
-    if (p.toLowerCase().indexOf("/jedikg") === 0) {
+    var first = p.split("/")[1].toLowerCase();
+    if (moved.indexOf(first) !== -1) {
       location.replace("https://kleis-uniba.github.io" + p + location.search + location.hash);
     }
   </script>
@@ -29,17 +33,18 @@
   </style>
 </head>
 <body>
-  <h1>JediKG has moved to KLEIS</h1>
+  <h1>This page has moved to KLEIS</h1>
   <p>
     The ARA-T3 lab is now <strong>KLEIS</strong>
     (Knowledge, Learning, Explainability, Inference and Semantics),
-    and JediKG is now maintained under the
+    and our projects are now maintained under the
     <a href="https://github.com/KLEIS-UNIBA">KLEIS-UNIBA</a> organization.
   </p>
-  <p>
-    Documentation: <a href="https://kleis-uniba.github.io/jedikg/">kleis-uniba.github.io/jedikg</a><br>
-    Repository: <a href="https://github.com/KLEIS-UNIBA/jedikg">github.com/KLEIS-UNIBA/jedikg</a>
-  </p>
-  <p><small>If you are not redirected automatically, please use the links above and update your bookmarks.</small></p>
+  <ul>
+    <li>JediKG: <a href="https://kleis-uniba.github.io/jedikg/">documentation</a> &middot; <a href="https://github.com/KLEIS-UNIBA/jedikg">repository</a></li>
+    <li>pykeen-nsx: <a href="https://kleis-uniba.github.io/pykeen-nsx/">documentation</a> &middot; <a href="https://github.com/KLEIS-UNIBA/pykeen-nsx">repository</a></li>
+  </ul>
+  <p><small>If you are not redirected automatically, please use the links above and update your bookmarks.
+  Lab homepage: <a href="https://kleis-uniba.github.io/">kleis-uniba.github.io</a></small></p>
 </body>
 </html>
